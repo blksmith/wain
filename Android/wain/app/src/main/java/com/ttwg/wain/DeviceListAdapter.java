@@ -15,7 +15,7 @@ import java.util.ArrayList;
  */
 public class DeviceListAdapter extends ArrayAdapter<DeviceListItem> {
     private  Context context;
-    private boolean useList=true;
+    private boolean useList=false;
     public DeviceListAdapter(Context context,ArrayList<DeviceListItem> items)
     {
         super(context,android.R.layout.simple_list_item_1,items);
@@ -56,7 +56,7 @@ public class DeviceListAdapter extends ArrayAdapter<DeviceListItem> {
 
         holder.titleText.setText(item.getItemTitle());
         //int id = item.getid();
-        holder.idText.setText(item.getid());
+        holder.idText.setText(String.valueOf(item.getid()));
         return viewToUse;
     }
 }
