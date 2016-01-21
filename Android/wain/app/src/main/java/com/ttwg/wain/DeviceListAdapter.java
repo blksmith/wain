@@ -26,6 +26,8 @@ public class DeviceListAdapter extends ArrayAdapter<DeviceListItem> {
     //. The "ViewHolder" pattern is used to customize the display of our individual list and grid items and enhance the list loading speed.
     public class ViewHolder{
         TextView titleText;
+        TextView idText;
+
     }
 
     @Override
@@ -33,9 +35,6 @@ public class DeviceListAdapter extends ArrayAdapter<DeviceListItem> {
         ViewHolder holder =null;
         DeviceListItem item= getItem(position);
         View viewToUse = null;
-
-
-
 
         LayoutInflater mInflater = (LayoutInflater) context
                 .getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
@@ -48,6 +47,7 @@ public class DeviceListAdapter extends ArrayAdapter<DeviceListItem> {
 
             holder = new ViewHolder();
             holder.titleText = (TextView)viewToUse.findViewById(R.id.titleTextView);
+            holder.idText = (TextView)viewToUse.findViewById(R.id.idTextView);
             viewToUse.setTag(holder);
         } else {
             viewToUse = convertView;
@@ -55,6 +55,8 @@ public class DeviceListAdapter extends ArrayAdapter<DeviceListItem> {
         }
 
         holder.titleText.setText(item.getItemTitle());
+        //int id = item.getid();
+        holder.idText.setText(item.getid());
         return viewToUse;
     }
 }

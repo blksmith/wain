@@ -10,7 +10,7 @@ public class DeviceListItem {
     }
 
     public void setid(int id) {
-        this.mid = mid;
+        this.mid = id;
     }
 
     private int mid;

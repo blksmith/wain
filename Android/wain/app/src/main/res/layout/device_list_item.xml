@@ -6,7 +6,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Device Title"
+        android:text="Device id"
         android:id="@+id/idTextView"
         android:layout_gravity="center_horizontal"
 
@@ -15,7 +15,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Device Title"
+
+        android:text="Device title"
+        android:layout_below="@id/idTextView"
         android:id="@+id/titleTextView"
         android:layout_gravity="center_horizontal"
 
