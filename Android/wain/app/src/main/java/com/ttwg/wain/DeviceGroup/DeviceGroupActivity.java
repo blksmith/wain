@@ -1,15 +1,19 @@
-package com.ttwg.wain;
+package com.ttwg.wain.DeviceGroup;
 
-
+import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.ttwg.wain.Category.CategoryFragment;
 import com.ttwg.wain.Device.deviceFragment;
+import com.ttwg.wain.R;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * Created by zj on 2016/3/9.
+ */
+public class DeviceGroupActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager manager = getFragmentManager();
         Fragment fragment = manager.findFragmentById(R.id.fragmentContainer);
         if (fragment == null) {
-            fragment = new CategoryFragment();
+            fragment = new deviceGroupFragment();
             manager.beginTransaction()
                     .add(R.id.fragmentContainer, fragment)
                     .commit();

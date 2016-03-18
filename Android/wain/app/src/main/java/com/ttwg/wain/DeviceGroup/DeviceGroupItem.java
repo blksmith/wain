@@ -1,9 +1,9 @@
-package com.ttwg.wain;
+package com.ttwg.wain.DeviceGroup;
 
 /**
  * Created by zj on 2016/1/4.
  */
-public class DeviceListItem {
+public class DeviceGroupItem {
 
     public int getid() {
         return mid;
@@ -24,7 +24,7 @@ public class DeviceListItem {
     public void setItemTitle(String itemTitle) {
         this.mItemTitle = itemTitle;
     }
-    public DeviceListItem(String title)
+    public DeviceGroupItem(String title)
     {
         mItemTitle = title;
     }
